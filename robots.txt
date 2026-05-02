@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Block unnecessary system or sensitive paths (if they exist)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /cgi-bin/
+
+# Allow important assets
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap
+Sitemap: https://nishanttyagiandassociates.com/sitemap.xml
