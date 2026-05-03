@@ -222,6 +222,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         modalGallery.appendChild(imgEl);
                     });
+                } else if (type === 'peb' && id) {
+                    // --- PEB Gallery Logic ---
+                    const totalImages = 20;
+                    const availableIds = [];
+                    for (let i = 1; i <= totalImages; i++) {
+                        if (i !== id) availableIds.push(i);
+                    }
+
+                    // Shuffle and pick 3
+                    const shuffled = availableIds.sort(() => 0.5 - Math.random());
+                    const selected = shuffled.slice(0, 3);
+
+                    selected.forEach(nextId => {
+                        const imgEl = document.createElement('img');
+                        imgEl.src = `../assets/images/shelter/${nextId}.jpg`;
+                        imgEl.alt = `PEB Gallery Image ${nextId}`;
+
+                        imgEl.addEventListener('click', function () {
+                            modalMainImg.src = this.src;
+                        });
+
+                        modalGallery.appendChild(imgEl);
+                    });
                 } else {
                     // Fallback / Standard Logic (Placeholders)
                     // Placeholder gallery images (reusing placeholders)
