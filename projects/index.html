@@ -133,6 +133,18 @@
                 <h2 class="section-title">Our Projects</h2>
                 <p style="margin-top: 20px; color: #666;">A showcase of our structural engineering excellence.</p>
             </div>
+            <!-- ---Pre-Engineered Building (PEB) architecture---- -->
+
+            <h3 class="reveal"
+                style="margin-top: 50px; margin-bottom: 30px; border-left: 5px solid var(--secondary-color); padding-left: 15px;">
+                PEB Architecture Projects
+            </h3>
+
+            <div class="services-grid" id="pebProjects"></div>
+            
+            <!-- ------Pre-Engineered Building (PEB) architecture end -----  -->
+
+            <!-- ----3d design in project ----  -->
 
             <h3 class="reveal"
                 style="margin-top: 50px; margin-bottom: 30px; border-left: 5px solid var(--secondary-color); padding-left: 15px;">
@@ -279,6 +291,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ---3d proejct is over ---  -->
 
             <h3 class="reveal"
                 style="margin-top: 50px; margin-bottom: 30px; border-left: 5px solid var(--secondary-color); padding-left: 15px;">
@@ -603,7 +617,32 @@
             </div>
         </div>
     </footer>
+        <script>
+        const container = document.getElementById("pebProjects");
 
+        for (let i = 1; i <= 20; i++) {
+            container.innerHTML += `
+            <div class="service-card text-center view-project-btn reveal"
+                data-type="peb"
+                data-id="${i}"
+                data-title="Pre-Engineered Building Project"
+                data-img="../assets/images/shelter/${i}.jpg"
+                data-desc="Pre-Engineered Building structure design and installation.">
+
+                <div style="position: relative; overflow: hidden; border-radius: 5px; height: 200px;">
+                    <img src="../assets/images/shelter/${i}.jpg"
+                        class="project-img"
+                        alt="PEB Project ${i}"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    
+                    <div class="card-overlay">
+                        <i class="fas fa-search-plus fa-3x" style="color: white;"></i>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+    </script>
     <script src="../assets/js/script.js"></script>
 </body>
 
