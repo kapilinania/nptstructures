@@ -141,16 +141,16 @@ function getOrCreateFolder(folderName, parentFolder = DriveApp) {
 function sendConfirmationEmail(email, name, post) {
     if (!email) return;
     
-    const subject = `Application Received: ${post} - Nishant Tyagi & Associates`;
+    const subject = `Application Received: ${post} - NPT Structures`;
     const body = `Dear ${name},<br><br>
     
-    Thank you for applying for the position of <strong>${post}</strong> at Nishant Tyagi & Associates.<br><br>
+    Thank you for applying for the position of <strong>${post}</strong> at NPT Structures.<br><br>
     
     We have successfully received your application and resume. Our team will review your qualifications and reach out if your profile matches our requirements.<br><br>
     
     Best Regards,<br>
     <strong>HR Team</strong><br>
-    Nishant Tyagi & Associates`;
+    NPT Structures`;
 
     try {
         MailApp.sendEmail({
