@@ -14,4 +14,4 @@ Allow: /js/
 Allow: /images/
 
 # Sitemap
-Sitemap: https://nishanttyagiandassociates.com/sitemap.xml
+Sitemap: https://nptstructures.com/sitemap.xml
